@@ -1,0 +1,135 @@
+type Proxy_BackUnbacked {
+  id: ID!
+  reserve: String!
+  backer: String!
+  amount: BigInt!
+  fee: BigInt!
+}
+
+type Proxy_Borrow {
+  id: ID!
+  reserve: String!
+  user: String!
+  onBehalfOf: String!
+  amount: BigInt!
+  interestRateMode: BigInt!
+  borrowRate: BigInt!
+  referralCode: BigInt!
+}
+
+type Proxy_DeficitCovered {
+  id: ID!
+  reserve: String!
+  caller: String!
+  amountCovered: BigInt!
+}
+
+type Proxy_DeficitCreated {
+  id: ID!
+  user: String!
+  debtAsset: String!
+  amountCreated: BigInt!
+}
+
+type Proxy_FlashLoan {
+  id: ID!
+  target: String!
+  initiator: String!
+  asset: String!
+  amount: BigInt!
+  interestRateMode: BigInt!
+  premium: BigInt!
+  referralCode: BigInt!
+}
+
+type Proxy_IsolationModeDebtUpdated {
+  id: ID!
+  asset: String!
+  totalDebt: BigInt!
+}
+
+type Proxy_LiquidationCall {
+  id: ID!
+  collateralAsset: String!
+  debtAsset: String!
+  user: String!
+  debtToCover: BigInt!
+  liquidatedCollateralAmount: BigInt!
+  liquidator: String!
+  receiveAToken: Boolean!
+}
+
+type Proxy_MintUnbacked {
+  id: ID!
+  reserve: String!
+  user: String!
+  onBehalfOf: String!
+  amount: BigInt!
+  referralCode: BigInt!
+}
+
+type Proxy_MintedToTreasury {
+  id: ID!
+  reserve: String!
+  amountMinted: BigInt!
+}
+
+type Proxy_Repay {
+  id: ID!
+  reserve: String!
+  user: String!
+  repayer: String!
+  amount: BigInt!
+  useATokens: Boolean!
+}
+
+type Proxy_ReserveDataUpdated {
+  id: ID!
+  reserve: String!
+  liquidityRate: BigInt!
+  stableBorrowRate: BigInt!
+  variableBorrowRate: BigInt!
+  liquidityIndex: BigInt!
+  variableBorrowIndex: BigInt!
+}
+
+type Proxy_ReserveCollateralDisabled {
+  id: ID!
+  reserve: String!
+  user: String!
+}
+
+type Proxy_ReserveCollateralEnabled {
+  id: ID!
+  reserve: String!
+  user: String!
+}
+
+type Proxy_Supply {
+  id: ID!
+  reserve: String!
+  user: String!
+  onBehalfOf: String!
+  amount: BigInt!
+  referralCode: BigInt!
+}
+
+type Proxy_Upgraded {
+  id: ID!
+  implementation: String!
+}
+
+type Proxy_UserEModeSet {
+  id: ID!
+  user: String!
+  categoryId: BigInt!
+}
+
+type Proxy_Withdraw {
+  id: ID!
+  reserve: String!
+  user: String!
+  to: String!
+  amount: BigInt!
+}
+
